@@ -2,24 +2,23 @@
 /* jshint browser: true */
 "use strict";
 
-const category = 'toys';
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-console.log(`https://someurl.com/${category}/5/jopa`);
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let incr = 10,
-    decr = 10;
+const a = prompt('Последний просмотренный фильм?', ''),
+      b = prompt('Ваща оценка фильму?', ''),
+      c = prompt('Последний просмотренный фильм?', ''),
+      d = prompt('Ваща оценка фильму?', '');
+      
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-// incr++;
-// decr--;
+console.log(personalMovieDB);
 
-console.log(++incr);
-console.log(--decr);
-
-console.log(5%24);
-
-console.log(2*4 === '8');
-
-const isChecked = false,
-    isClose = false;
-
-console.log(isChecked || !isClose);
